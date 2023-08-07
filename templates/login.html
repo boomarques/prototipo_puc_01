@@ -1,0 +1,75 @@
+{% extends 'base/base00.html' %}
+{%load static%}
+
+{% block base00 %}
+
+<div class="container-fluid  min-vh-100 p-0 justify-content-center align-items-center " style="background-color: #152020;">
+  
+  <div class="row min-vh-100 m-0 justify-content-center align-content-center">
+    
+    <div class="col justify-content-center">
+      
+      <!-- Img Logo -->
+      <div class="d-flex justify-content-center mb-4">
+        <img src="{% static 'imgs/logo_01.png'%}" alt="sigame" height="200px" width="200px">
+      </div>
+
+      <!-- Form -->
+      <div class="d-flex justify-content-center">
+        <form class="mx-3" style="max-width: 350px;">
+            <div class="mb-3">
+              <label for="login" class="form-label text-white">Usuário:</label>
+              <input type="text" class="form-control" placeholder="UsuarioABC">
+            </div>
+            
+            <div class="mb-5">
+              <label for="exampleInputPassword1" class="form-label text-white">Senha:</label>
+              <input type="password" class="form-control" placeholder="************">
+            </div>
+            
+            <div class="d-flex justify-content-center">
+              <a href="/guias_0/" class="btn btn-primary px-5" role="button">Entrar</a>
+            </div>
+        </form>
+      </div>
+
+      <!-- Modal -->
+      <div class="d-flex justify-content-center m-5 pb-5">
+        <a class="nav-item text-white-50" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Problema de acesso? Clique aqui.
+        </a>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Problemas de Acesso</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <div class="modal-body">
+                Recuperação de senha e criação de novos usuários é atribuição do administrador. <br> <br>
+                Entre em contato pelos canais abaixo: <br>
+                Email: administrador@sigame.xxx <br>
+                Telefone: (00) 98765-4321
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+      
+    </div>
+
+  </div>
+  
+  
+  
+
+</div>
+
+{% endblock %}
